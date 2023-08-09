@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+<p>This is the image you uploaded</p>
+<img src="{{img}}">
+<p>The model predicts that this is a...</p>
+<h2>{{pred}}</h2>
+{% endblock %}
