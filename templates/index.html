@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>Insert an image below to classify a digit!</h1>
+<h4>NOTE: Due to image pre-processing, the model may have some trouble recognizing the digits. On the dataset it was trained and tested upon, the model achieved around 95% testing accuracy.</h4>
+
+<div>
+  <form method = "POST" action = "{{ url_for('handle_get') }}" enctype="multipart/form-data">
+    <input type = "file" name = "image" accept=".png, .jpg, .jpeg">
+    <button type = "submit">submit</button>
+  </form>
+</div>
+
+{% endblock %}
